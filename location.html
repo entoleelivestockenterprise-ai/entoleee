@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>entolee Ranch Services</title>
+    <link rel="stylesheet" href="animal1.css">
+    <link rel="stylesheet" href="location.css">
+  </head>
+  <body>
+    <section class="location-hero">
+      <h1>Visit Our Breeding & Logistics Facility</h1>
+      <p>Come view our facilities, consult with our livestock geneticists, or coordinate your free transport route setup.</p>
+    </section>
+
+    <main class="main-container">
+      <div class="map-wrapper">
+        <div id="map"></div>
+        <div class="map-bar">
+          <div class="map-status">
+            <div class="pulse-dot"></div>
+            <span><strong>Live Facility Status:</strong> Open for Bio-Secure Farm Inspections</span>
+          </div>
+          <div>📍 HQ & Distribution Hub</div>
+        </div>
+      </div>
+
+      <div class="details-sidebar">
+        <div class="info-card">
+          <h2>🏢 Headquarters Address</h2>
+          <address class="address-text">
+            <strong>entolee Livestock Logistics Ltd.</strong><br>
+            we offer delivery services worldwide<br>
+            Greenhills Agricultural Zone, GH 84021<br>
+            <span style="color: var(--secondary); font-weight: 600;">📞 Office 0104379323</span>
+          </address>
+          <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+            *Please note: Visitors must undergo foot-bath sanitization upon entry to preserve herd health and biosecurity protocols.
+          </p>
+          <a href="https://maps.google.com" target="_blank" class="btn-route">Get GPS Driving Directions</a>
+        </div>
+
+        <div class="info-card">
+          <h2>⏳ Facility Gate Hours</h2>
+          <div class="hours-row">
+            <span class="hours-day">Monday - Friday</span>
+            <span class="hours-time">07:00 AM - 05:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="hours-day">Saturday</span>
+            <span class="hours-time">08:00 AM - 01:00 PM</span>
+          </div>
+          <div class="hours-row" style="color: #ef4444;">
+            <span class="hours-day">Sunday</span>
+            <span class="hours-time">Closed (Vet Care Only)</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="distribution-section">
+      <div class="dist-title">
+        <h2>Our Free Transport Delivery Radii</h2>
+        <p>From our central headquarters, we safely dispatch shipments across three core zones without charging a single mileage fee.</p>
+      </div>
+
+      <div class="dist-grid">
+        <div class="zone-card">
+          <h3>Zone A (Immediate Transit)</h3>
+          <p>Deliveries within a 50-mile radius are processed and completed within 24 to 48 hours of health check clearings.</p>
+        </div>
+        <div class="zone-card">
+          <h3>Zone B (Regional Freight)</h3>
+          <p>Deliveries ranging from 51 to 200 miles drop every Tuesday and Thursday using mid-tier biosecure climate-vans.</p>
+        </div>
+        <div class="zone-card">
+          <h3>Zone C (Extended Haul)</h3>
+          <p>Long-distance transfers (200+ miles) go out in weekly Friday convoys to maximize animal company and minimize stress.</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+      var map = L.map('map').setView([38.9072, -77.0369], 10);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+      var marker = L.marker([38.9072, -77.0369]).addTo(map);
+      marker.bindPopup('<b>Heritage Livestock Logistics HQ</b><br>Sanitized Breeding & Transit Base Hub.').openPopup();
+    </script>
+  </body>
+</html>

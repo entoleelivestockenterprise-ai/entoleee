@@ -1,0 +1,186 @@
+ody {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f4f8; /* Light background for the page */
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensures footer sticks to bottom */
+        min-height: 100vh;
+        
+        }
+
+        /* Product Card Styling and Hover Effects */
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 6rem; /* Large rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Soft shadow */
+            overflow: hidden; /* Ensures image corners are rounded */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Push button to bottom */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px); /* Lift card slightly */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+        }
+
+        .product-card img {
+            width: 200px;
+            height: 200px; /* Fixed height for consistent image size */
+            object-fit: contain; /* Ensures entire image is visible, padding if needed */
+            padding: 1rem; /* Padding inside the card for the image */
+            background-color: #f8f8f8; /* Light background for the image area */
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1; /* Allows info to take available space */
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-price {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #4c51bf; /* Indigo color for price */
+            margin-bottom: 1rem;
+        }
+
+        .buy-button {
+            display: block; /* Make button full width of its container */
+            width: calc(50% - 3rem); /* Full width minus padding of parent product-info */
+            margin: 0 1.5rem 1.5rem 1.5rem; /* Apply margin to position at bottom and match padding */
+            background-color: #4cbf52; /* Indigo */
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.75rem; /* Match card roundedness */
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-button:hover {
+            background-color: #3f92a1; /* Darker indigo */
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Grid for Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+            gap: 2rem; /* Space between product cards */
+        }
+
+        /* Specific adjustments for smaller screens if needed */
+        @media (max-width: 640px) {
+            .products-grid {
+                grid-template-columns: 1fr; /* Single column on very small screens */
+            }
+        }
+        
+
+/* Navbar Container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+/* Logo Styling */
+.nav-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo span {
+  color: #4f46e5; /* Trendy Indigo color */
+}
+
+/* Menu & Links */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4b5563; /* Slate gray */
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Hover & Active States (Sliding underline effect) */
+.nav-link:hover, 
+.nav-link.active {
+  color: #4f46e5;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Call to Action Button */
+.btn-cta {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: #4338ca;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+  transform: translateY(-1px);
+}
+

@@ -1,0 +1,144 @@
+body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            padding: 20px;
+        }
+
+        /* The Main Beautiful Container */
+        .payment-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #ffffff;
+        }
+
+        /* Header Styling */
+        .card-header .icon-wrap {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #acbec5, #cbcde9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .card-header h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #012247, #18447a);
+            
+        }
+        .card-header p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            margin-bottom: 25px;
+        }
+
+        /* Action Buttons Wrapper */
+        .action-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 30px;
+        }
+
+        /* Base Button Style */
+        .btn-channel {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
+        }
+
+        .btn-channel .left-side {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn-channel i {
+            font-size: 1.3rem;
+        }
+
+        .btn-channel .arrow {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            transition: transform 0.3s ease;
+        }
+
+        /* WhatsApp Button Custom Colors */
+        .btn-whatsapp {
+            background: rgba(34, 197, 94, 0.1);
+            color: #4ade80;
+            border-color: rgba(34, 197, 94, 0.15);
+        }
+
+        .btn-whatsapp:hover {
+            background: #22c55e;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(34, 197, 94, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Email Button Custom Colors */
+        .btn-email {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.15);
+        }
+
+        .btn-email:hover {
+            background: #0ea5e9;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Hover Arrow Shift */
+        .btn-channel:hover .arrow {
+            transform: translateX(4px);
+            opacity: 1;
+        }
+
+        /* Trust Footer */
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .card-footer i {
+            color: #f59e0b;
+        }
